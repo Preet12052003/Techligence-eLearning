@@ -13,6 +13,7 @@ const loginUser = async (req , res) => {
 
 const registerUser = async (req , res) => {
     const {role , email , password} = req.body
+
     const userExists = await instituteUser.findOne({email , role})
 
     if(userExists){
